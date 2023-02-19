@@ -1,0 +1,14 @@
+<h1 class="header text-white text-center">{{productHouseName}}</h1>
+<div class="row justify-content-md-center">
+  <div *ngFor="let product of products" class="col-sm text-center text-white">
+    <figure class="figure">
+      <a href="{{product['link']}}">
+        <img class="rounded-circle product-img" src="assets/{{product['imgLink']}}" alt="{{product['name']}}">
+      </a>
+    </figure>
+    <p class="description">{{product['name']}}</p>
+    <a>
+      <button class="btn-sm text-white rounded-pill claim-button">Claim</button>
+    </a>
+  </div>
+</div>

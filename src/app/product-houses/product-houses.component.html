@@ -1,0 +1,10 @@
+<div class="row justify-content-md-center">
+  <div *ngFor="let ph of productHouses" class="col-sm text-center text-white">
+    <figure class="figure">
+      <a routerLink="/products/{{ph['name']}}">
+        <img class="rounded-circle product-img" src="assets/{{ph['imgLink']}}" alt="{{ph['name']}}">
+      </a>
+    </figure>
+    <p class="description">{{ph['name']}}</p>
+  </div>
+</div>
