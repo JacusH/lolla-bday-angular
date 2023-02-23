@@ -1,0 +1,26 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button with a menu">
+  <mat-icon>menu</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button *ngIf="!loggedIn" mat-menu-item routerLink="/logIn">
+    <mat-icon>login</mat-icon>
+    <span>Log In</span>
+  </button>
+  <button *ngIf="!loggedIn" mat-menu-item routerLink="/signUp">
+    <mat-icon>person_add</mat-icon>
+    <span>Sign Up</span>
+  </button>
+  <button *ngIf="loggedIn" mat-menu-item routerLink="/logOut">
+    <mat-icon>logout</mat-icon>
+    <span>Log Out</span>
+  </button>
+  <button *ngIf="loggedIn && admin" mat-menu-item routerLink="/admin">
+    <mat-icon>admin_panel_settings</mat-icon>
+    <span>Admin</span>
+  </button>
+<!--  <button mat-menu-item disabled>-->
+<!--    <mat-icon>voicemail</mat-icon>-->
+<!--    <span>Check voice mail</span>-->
+<!--  </button>-->
+
+</mat-menu>
