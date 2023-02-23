@@ -1,13 +1,15 @@
 <nav class="navbar rounded-pill" id="nav-bar">
   <a class="navbar-brand text-white nav-button" id="nav-button" routerLink="">Lolla B-Day Wishlist</a>
-  <div *ngIf="loggedIn; then signOutBlock else logInSignUpBlock"></div>
-  <ng-template #signOutBlock>
-    <a class="navbar-brand text-white nav-button text-right" routerLink="/signOut">Sign Out</a>
-  </ng-template>
-  <ng-template #logInSignUpBlock>
-    <a class="navbar-brand text-white nav-button text-right" routerLink="/logIn">Log In</a>
-    <a class="navbar-brand text-white nav-button text-right" href="/signUp">Sign Up</a>
-  </ng-template>
+<!--  <div *ngIf="loggedIn; then signOutBlock else logInSignUpBlock"></div>-->
+<!--  <ng-template #signOutBlock>-->
+<!--    <a class="navbar-brand text-white nav-button text-right" routerLink="/signOut">Sign Out</a>-->
+<!--  </ng-template>-->
+<!--  <ng-template #logInSignUpBlock>-->
+<!--    <a class="navbar-brand text-white nav-button text-right" routerLink="/logIn">Log In</a>-->
+<!--    <a class="navbar-brand text-white nav-button text-right" href="/signUp">Sign Up</a>-->
+<!--  </ng-template>-->
+
+  <app-menu class="navbar-brand text-white nav-button"></app-menu>
 </nav>
 
 <div class="container" id="container">
