@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class MenuComponent {
 
-  loggedIn = false
+  loggedIn = true
   admin = true
 
 }
