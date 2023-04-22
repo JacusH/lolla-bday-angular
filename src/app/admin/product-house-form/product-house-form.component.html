@@ -1,10 +1,13 @@
-<h2>Product House</h2>
-<div class="form-group">
-  <label for="phName">Name:</label>
-  <input type="text" id="phName" name="phName">
+<h3>Add Product House</h3>
 
-  <label for="phImg">Image Link:</label>
-  <input type="text" id="phImg" name="phImg">
-
-  <button type="button" (click)="save()">save</button>
+<div class="form-group" [formGroup]="productHouseFormGroup">
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
+  <br>
+  <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
+  <input hidden (change)="onFileSelected()" #fileInput type="file" id="house-file">
+  <br>
+  <button type="submit" (click)="onSubmit()">Submit</button>
 </div>

@@ -2,8 +2,15 @@ import {ProductHouse} from "./product-house";
 
 export interface Product {
   name: string,
-  imgLink: string,
+  image: string,
   claimable: boolean,
-  productHouse: ProductHouse,
+  house: ProductHouse,
+  link: string
+}
+
+export interface ProductDTO {
+  name: string,
+  base64Image: string,
+  houseName: string,
   link: string
 }

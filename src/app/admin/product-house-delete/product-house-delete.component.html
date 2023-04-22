@@ -1,0 +1,14 @@
+<h3>Remove Product House</h3>
+
+<div class="form-group" [formGroup]="productHouseDeleteFormGroup">
+  <mat-form-field appearance="outline">
+    <mat-label>House to Remove</mat-label>
+    <mat-select formControlName="house">
+      <mat-option *ngFor="let house of productHouses" [value]="house.name">
+        {{house.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+  <button type="submit" (click)="onSubmit()">Submit</button>
+</div>

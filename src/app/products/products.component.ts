@@ -28,4 +28,9 @@ export class ProductsComponent implements OnInit{
     this.productService.getProducts(this.productHouseName)
       .subscribe((products: Product[]) => this.products = products)
   }
+
+  claim(productName: string) {
+    this.productService.claimProduct(productName)
+      .subscribe(() => {this.loadProducts();});
+  }
 }

@@ -2,13 +2,13 @@
 <div class="row justify-content-md-center">
   <div *ngFor="let product of products" class="col-sm text-center text-white">
     <figure class="figure">
-      <a href="{{product['link']}}">
-        <img class="rounded-circle product-img" src="assets/{{product['imgLink']}}" alt="{{product['name']}}">
+      <a href="{{product['link']}}" target="_blank">
+        <img class="rounded-circle product-img" src="data:image/png;base64, {{product['image']}}" alt="{{product['name']}}">
       </a>
     </figure>
     <p class="description">{{product['name']}}</p>
-    <a>
-      <button class="btn-sm text-white rounded-pill claim-button">Claim</button>
-    </a>
+    <button *ngIf="product.claimable" class="btn-sm text-white rounded-pill claim-button" (click)="claim(product.name)">Claim</button>
+<!--    TODO disable claimed-->
+    <button *ngIf="!product.claimable" class="btn-sm text-white rounded-pill claimed-button" (click)="claim(product.name)">Claimed</button>
   </div>
 </div>

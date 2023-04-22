@@ -17,6 +17,10 @@ import {MatButtonModule} from "@angular/material/button";
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
 import {MatInputModule} from "@angular/material/input";
+import {ReactiveFormsModule} from "@angular/forms";
+import { ProductHouseDeleteComponent } from './admin/product-house-delete/product-house-delete.component';
+import {MatSelectModule} from "@angular/material/select";
+import { ProductDeleteComponent } from './admin/product-delete/product-delete.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,9 @@ import {MatInputModule} from "@angular/material/input";
     ProductHouseFormComponent,
     MenuComponent,
     NavbarComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    ProductHouseDeleteComponent,
+    ProductDeleteComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +43,9 @@ import {MatInputModule} from "@angular/material/input";
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

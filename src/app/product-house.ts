@@ -1,4 +1,9 @@
 export interface ProductHouse {
   name: string,
-  imgLink: string
+  image: string
+}
+
+export interface ProductHouseDTO {
+  name: string,
+  base64Image: string
 }

@@ -19,7 +19,7 @@ export class ProductHousesComponent implements OnInit {
     this.loadProductHouses()
   }
 
-  loadProductHouses() {
+  private loadProductHouses() {
     this.productHouseService.getProductHouses()
       .subscribe((productHouses: ProductHouse[]) => this.productHouses = productHouses)
   }

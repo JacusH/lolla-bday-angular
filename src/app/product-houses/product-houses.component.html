@@ -2,7 +2,7 @@
   <div *ngFor="let ph of productHouses" class="col-sm text-center text-white">
     <figure class="figure">
       <a routerLink="/products/{{ph['name']}}">
-        <img class="rounded-circle product-img" src="assets/{{ph['imgLink']}}" alt="{{ph['name']}}">
+        <img class="rounded-circle product-img" src="data:image/png;base64, {{ph['image']}}" alt="{{ph['name']}}">
       </a>
     </figure>
     <p class="description">{{ph['name']}}</p>
